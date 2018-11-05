@@ -21,7 +21,7 @@ Open [SecretSantaProject.sln](SecretSantaProject.sln) with Visual Studio 2017. B
 
 1. Create an account at https://www.twilio.com
 2. Get a free a phone number capable of sending text messages to your destination.
-3. Update [TwilioSmsNotificationService.cs](https://github.com/rodriguez-maria/SecretSantaProject/blob/master/SecretSantaProject/Services/TwilioSmsNotificationService.cs) file with your Twilio accountSid and authToken.
+3. Update [TwilioSmsNotificationService.cs](https://github.com/rodriguez-maria/SecretSantaProject/blob/master/SecretSantaProject/Services/TwilioSmsNotificationService.cs) file with your Twilio accountSid, authToken, and sms capable twilio phone number.
 4. In [Program.cs](https://github.com/rodriguez-maria/SecretSantaProject/blob/master/SecretSantaProject/Program.cs), replace:
 
 ```
