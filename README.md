@@ -14,7 +14,7 @@ git clone https://github.com/rodriguez-maria/SecretSantaProject.git
 ```
 
 ### Running tests
-Open [SecretSantaProject.sln](SecretSantaProject.sln) with Visual Studio 2017. Build both [SecretSantaProject](SecretSantaProject) and [SecretSantaProject.Tests](SecretSantaProject.Tests) projects. Run the tests.
+Open [SecretSantaProject.sln](SecretSantaProject.sln) with Visual Studio 2017. Build both [https://github.com/rodriguez-maria/SecretSantaProject/tree/master/SecretSantaProject](SecretSantaProject) and [https://github.com/rodriguez-maria/SecretSantaProject/tree/master/SecretSantaProject.Test](SecretSantaProject.Tests) projects. Run the tests.
 
 
 ### Setting up Twilio
