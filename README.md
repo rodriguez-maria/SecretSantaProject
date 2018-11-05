@@ -34,23 +34,10 @@ builder.RegisterInstance(new TwilioSmsNotificationService())
                    .As<INotificationService>();
 ```
 
-### Installing
+### Running the app
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+1. Create a file similar to [https://github.com/rodriguez-maria/SecretSantaProject/blob/master/SecretSantaProject.Test/ContactstTest.txt](ContactstTest.txt).
+2. Pass the file path as the 1st commandline argument of the console app.
 
 
 ## Built With
