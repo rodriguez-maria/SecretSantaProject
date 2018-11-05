@@ -5,15 +5,33 @@
 You can use this project to do a SecretSanta draw and notify the participants by sms. This is a flexible project built as a C# console app and it uses Twilio APIs to send sms.
 
 ## Getting Started
+Use the following steps to get the project, run tests, and do a secret santa draw.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
+### Cloning the project
 
 ```
-Give examples
+git clone https://github.com/rodriguez-maria/SecretSantaProject.git
+```
+
+### Running tests
+Open [SecretSantaProject.sln](SecretSantaProject.sln) with Visual Studio 2017. Build both [SecretSantaProject](SecretSantaProject) and [SecretSantaProject.Tests](SecretSantaProject.Tests) projects. Run the tests.
+
+
+### Setting up Twilio
+
+1. Create an account at https://www.twilio.com
+2. Get a free a phone number capable of sending text messages to your destination.
+3. Update [https://github.com/rodriguez-maria/SecretSantaProject/blob/master/SecretSantaProject/Services/TwilioSmsNotificationService.cs](TwilioSmsNotificationService.cs) file with your Twilio accountSid and authToken.
+4. In [https://github.com/rodriguez-maria/SecretSantaProject/blob/master/SecretSantaProject/Program.cs](Program.cs), replace:
+
+```
+builder.RegisterInstance(new ConsoleNotificationService())
+                   .As<INotificationService>();
+```
+with:
+```
+builder.RegisterInstance(new TwilioSmsNotificationService())
+                   .As<INotificationService>();
 ```
 
 ### Installing
@@ -34,24 +52,13 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 
 ## Built With
 
 * [Twilio](https://www.twilio.com/docs/) - The sms service used
 * [Autofac](https://autofac.org/) - Dependency Injection framework used
 * [Moq](https://github.com/moq/moq4) - Mocking framework used
+* [MedallionRandom](https://github.com/madelson/MedallionUtilities/tree/master/MedallionRandom) - Randomizer used
 
 
 ## Authors
@@ -59,11 +66,11 @@ Give an example
 * **Maria Rodriguez** - *Initial work* - [rodriguez-maria](https://github.com/rodriguez-maria)
 * **Faisal Rahman** - *Initial work* - [rfaisal](https://github.com/rfaisal)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/rodriguez-maria/SecretSantaProject/graphs/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
