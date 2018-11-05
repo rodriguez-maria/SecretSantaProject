@@ -14,15 +14,15 @@ git clone https://github.com/rodriguez-maria/SecretSantaProject.git
 ```
 
 ### Running tests
-Open [SecretSantaProject.sln](SecretSantaProject.sln) with Visual Studio 2017. Build both [https://github.com/rodriguez-maria/SecretSantaProject/tree/master/SecretSantaProject](SecretSantaProject) and [https://github.com/rodriguez-maria/SecretSantaProject/tree/master/SecretSantaProject.Test](SecretSantaProject.Tests) projects. Run the tests.
+Open [SecretSantaProject.sln](SecretSantaProject.sln) with Visual Studio 2017. Build both [SecretSantaProject](https://github.com/rodriguez-maria/SecretSantaProject/tree/master/SecretSantaProject) and [SecretSantaProject.Test](https://github.com/rodriguez-maria/SecretSantaProject/tree/master/SecretSantaProject.Test) projects. Run the tests.
 
 
 ### Setting up Twilio
 
 1. Create an account at https://www.twilio.com
 2. Get a free a phone number capable of sending text messages to your destination.
-3. Update [https://github.com/rodriguez-maria/SecretSantaProject/blob/master/SecretSantaProject/Services/TwilioSmsNotificationService.cs](TwilioSmsNotificationService.cs) file with your Twilio accountSid and authToken.
-4. In [https://github.com/rodriguez-maria/SecretSantaProject/blob/master/SecretSantaProject/Program.cs](Program.cs), replace:
+3. Update [TwilioSmsNotificationService.cs](https://github.com/rodriguez-maria/SecretSantaProject/blob/master/SecretSantaProject/Services/TwilioSmsNotificationService.cs) file with your Twilio accountSid and authToken.
+4. In [Program.cs](https://github.com/rodriguez-maria/SecretSantaProject/blob/master/SecretSantaProject/Program.cs), replace:
 
 ```
 builder.RegisterInstance(new ConsoleNotificationService())
@@ -36,7 +36,7 @@ builder.RegisterInstance(new TwilioSmsNotificationService())
 
 ### Running the app
 
-1. Create a file similar to [https://github.com/rodriguez-maria/SecretSantaProject/blob/master/SecretSantaProject.Test/ContactstTest.txt](ContactstTest.txt).
+1. Create a file similar to [ContactstTest.txt](https://github.com/rodriguez-maria/SecretSantaProject/blob/master/SecretSantaProject.Test/ContactstTest.txt).
 2. Pass the file path as the 1st commandline argument of the console app.
 
 
